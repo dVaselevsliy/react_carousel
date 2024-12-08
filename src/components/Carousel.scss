@@ -1,1 +1,41 @@
-// style go here
+.Container {
+  transform: translate(10px);
+  height: 260px;
+  width: 390px;
+  overflow: auto;
+  transition: 1000ms;
+}
+
+.Carousel__list {
+  display: flex;
+  gap: 10px;
+}
+
+.left, .rigth {
+  margin: 10px;
+}
+
+.rigth {
+  position: absolute;
+  left: 340px;
+}
+
+.button {
+  border-radius: 40%;
+  border: 2px solid red;
+  cursor: pointer;
+  color: blue;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.item {
+  width: 130px;
+  padding: 10px;
+}

@@ -1,7 +1,7 @@
 # React Carousel
 
 > [React + Typescript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript)
-
+this.state.images.map(image => ({image}))
 1. implement a carousel described [here](https://github.com/mate-academy/dom_carousel) as a React component
     ```jsx harmony
     <Carousel images={['url1', 'url2']} />
