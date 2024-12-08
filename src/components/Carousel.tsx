@@ -16,7 +16,7 @@ const Carousel: React.FC<Props> = ({
   frameSize,
   step,
   animationDuration,
-  infinite
+  infinite,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 

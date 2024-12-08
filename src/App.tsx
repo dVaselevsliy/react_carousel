@@ -8,7 +8,7 @@ interface State {
   frameSize: number;
   step: number;
   animationDuration: number;
-  infinite: boolean
+  infinite: boolean;
 }
 
 class App extends React.Component<{}, State> {
@@ -29,37 +29,37 @@ class App extends React.Component<{}, State> {
     frameSize: 3,
     step: 3,
     animationDuration: 1000,
-    infinite: false
+    infinite: false,
   };
 
   handleItemWidth = (event: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ itemWidth: +event.target.value})
-  }
+    this.setState({ itemWidth: +event.target.value });
+  };
 
   handleFrameSize = (event: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ frameSize: +event.target.value})
-  }
+    this.setState({ frameSize: +event.target.value });
+  };
 
   handleStep = (event: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ step: +event.target.value})
-  }
+    this.setState({ step: +event.target.value });
+  };
 
   handleAnimationDuration = (event: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ animationDuration: +event.target.value})
-  }
+    this.setState({ animationDuration: +event.target.value });
+  };
 
   handleInfinite = () => {
-    this.setState({ infinite: !this.state.infinite})
-  }
+    this.setState(prevState => ({ infinite: !prevState.infinite }));
+  };
 
   render() {
     const { images } = this.state;
 
     return (
       <div className="App">
-       {/*  {/* eslint-disable-next-line */}
+        {/*  {/* eslint-disable-next-line */}
 
-        <h1 data-cy='title'>Carousel with {images.length} images</h1>
+        <h1 data-cy="title">Carousel with {images.length} images</h1>
 
         <Carousel
           images={this.state.images}
@@ -79,7 +79,6 @@ class App extends React.Component<{}, State> {
             min={75}
             max={189}
           />
-
         </div>
 
         <div className="frameSize">
